@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Boost from './components/Boost';
+import Footer from './components/Footer';
+import Landing from './components/Landing/Landing';
+import Navbar from './components/Navbar';
+import Shortener from './components/Shortener';
+import Statistics from './components/Statistics';
+import { GlobalStyles } from './theme';
 
-function App() {
+export const Container = styled.div`
+  max-width: 1080px;
+  margin: auto;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Container>
+        <Navbar />
+        <Landing />
+        <Shortener />
+      </Container>
+      <Statistics />
+      <Boost />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
