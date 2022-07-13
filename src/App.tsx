@@ -10,6 +10,10 @@ import { GlobalStyles } from './theme';
 export const Container = styled.div`
   max-width: 1080px;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    max-width: 355px;
+  }
 `;
 
 const App = () => {

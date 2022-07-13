@@ -12,6 +12,11 @@ export const Card = styled.div`
   &:last-child {
     margin-right: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    text-align: center;
+  }
 `;
 
 export const CardDesc = styled.div`
@@ -25,6 +30,10 @@ export const CardImageLabel = styled.div`
   border-radius: 50%;
   position: absolute;
   top: -33px;
+
+  @media screen and (max-width: 768px) {
+    left: 145px;
+  }
 `;
 
 export const StatisticWrapper = styled.div`
@@ -41,18 +50,31 @@ export const TitleHeader = styled.div`
 export const MainTitle = styled.div`
   font-weight: 700;
   font-size: 36px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const MainSubtitle = styled.div`
   color: hsl(257, 7%, 63%);
   width: 480px;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    margin-top: 16px;
+  }
 `;
 
 export const CardWrapper = styled.div`
   display: flex;
   margin-top: 120px;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CyanLine = styled.hr`

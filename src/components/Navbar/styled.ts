@@ -9,6 +9,11 @@ export const Nav = styled.nav`
 
 export const NavLink = styled.div`
   padding: 5px 15px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavItems = styled.div`
@@ -20,4 +25,16 @@ export const NavItems = styled.div`
 
 export const NavBrand = styled.div`
   margin-right: 30px;
+`;
+
+export const BurgerMobile = styled.div`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const DesktopButton = styled.div`
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

@@ -6,4 +6,12 @@ export const GlobalStyles = createGlobalStyle`
      font-family: 'Poppins';
      overflow-x: hidden;
   }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 `;

@@ -10,11 +10,15 @@ export const ShortenerWrapper = styled.div`
   padding: 40px 50px;
   width: 100%;
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ShortenerButton = styled.button`
   background-color: hsl(180, 66%, 49%);
-  border-radius: 12px;
+  border-radius: 8px;
   color: white;
   border: none;
   outline: none;
@@ -23,6 +27,12 @@ export const ShortenerButton = styled.button`
   padding: 0 35px;
   font-size: 14px;
   white-space: nowrap;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 12px;
+  }
 `;
 
 export const ShortenerInput = styled.input`
@@ -30,8 +40,24 @@ export const ShortenerInput = styled.input`
   outline: none;
   padding: 15px 20px;
   width: 80%;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-right: 20px;
   font-weight: 700;
   color: hsl(257, 7%, 63%);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+  }
+`;
+
+export const ShortenerOuter = styled.div`
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
 `;

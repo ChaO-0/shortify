@@ -5,6 +5,10 @@ export const FooterWrapper = styled.div`
   justify-content: space-between;
   color: white;
   padding: 70px 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterBackground = styled.div`

@@ -9,4 +9,10 @@ export const BoostWrapper = styled.div`
   color: white;
   text-align: center;
   padding: 70px 0;
+
+  h1 {
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
 `;

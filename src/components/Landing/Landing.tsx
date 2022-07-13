@@ -7,6 +7,7 @@ import {
   Title,
   Subtitle,
   WorkingImage,
+  ResponsiveBlock,
 } from './styled';
 
 const Landing: FunctionComponent = () => {
@@ -19,12 +20,9 @@ const Landing: FunctionComponent = () => {
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </Subtitle>
-          <Button
-            backgroundColor="hsl(180, 66%, 49%)"
-            style={{ marginTop: 30 }}
-          >
-            Get Started
-          </Button>
+          <ResponsiveBlock>
+            <Button backgroundColor="hsl(180, 66%, 49%)">Get Started</Button>
+          </ResponsiveBlock>
         </TitleWrapper>
         <div style={{ width: '100%' }}>
           <WorkingImage src={workingImg} />
