@@ -1,9 +1,13 @@
 import { Container } from '../../App';
 import {
   FooterBackground,
+  FooterNavBlock,
   FooterNavItem,
   FooterNavTitle,
+  FooterNavWrapper,
   FooterWrapper,
+  ResponsiveFlexBasis,
+  SocialWrapper,
 } from './styled';
 import { ReactComponent as Logo } from '../../assets/images/logoWhite.svg';
 import { ReactComponent as Facebook } from '../../assets/images/icon-facebook.svg';
@@ -16,42 +20,36 @@ const Footer = () => {
     <FooterBackground>
       <Container>
         <FooterWrapper>
-          <div style={{ flexBasis: 250 }}>
+          <ResponsiveFlexBasis>
             <Logo />
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              flexGrow: 1,
-            }}
-          >
-            <div>
+          </ResponsiveFlexBasis>
+          <FooterNavWrapper>
+            <FooterNavBlock>
               <FooterNavTitle>Features</FooterNavTitle>
               <FooterNavItem>Link Shortening</FooterNavItem>
               <FooterNavItem>Branded Links</FooterNavItem>
               <FooterNavItem>Analytics</FooterNavItem>
-            </div>
-            <div>
+            </FooterNavBlock>
+            <FooterNavBlock>
               <FooterNavTitle>Resources</FooterNavTitle>
               <FooterNavItem>Blog</FooterNavItem>
               <FooterNavItem>Developers</FooterNavItem>
               <FooterNavItem>Support</FooterNavItem>
-            </div>
-            <div>
+            </FooterNavBlock>
+            <FooterNavBlock>
               <FooterNavTitle>Company</FooterNavTitle>
               <FooterNavItem>About</FooterNavItem>
               <FooterNavItem>Our Team</FooterNavItem>
               <FooterNavItem>Careers</FooterNavItem>
               <FooterNavItem>Contact</FooterNavItem>
-            </div>
-          </div>
-          <div style={{ textAlign: 'right', flexBasis: 250 }}>
+            </FooterNavBlock>
+          </FooterNavWrapper>
+          <SocialWrapper>
             <Facebook />
             <Twitter style={{ marginLeft: 24 }} />
             <Pinterest style={{ marginLeft: 24 }} />
             <Instagram style={{ marginLeft: 24 }} />
-          </div>
+          </SocialWrapper>
         </FooterWrapper>
       </Container>
     </FooterBackground>

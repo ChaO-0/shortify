@@ -2,6 +2,7 @@ import { Container } from '../../App';
 import brandRecognitionImg from '../../assets/images/icon-brand-recognition.svg';
 import detaildRecordsImg from '../../assets/images/icon-detailed-records.svg';
 import fullyCustomizableImg from '../../assets/images/icon-fully-customizable.svg';
+import Shortener from '../Shortener';
 import {
   Card,
   CardImageLabel,
@@ -12,6 +13,7 @@ import {
   MainSubtitle,
   CardWrapper,
   CyanLine,
+  VrCyanLine,
 } from './styled';
 
 const statisticItems = [
@@ -37,29 +39,33 @@ const statisticItems = [
 
 const Statistics = () => {
   return (
-    <StatisticWrapper>
-      <Container>
-        <TitleHeader>
-          <MainTitle>Advanced Statistics</MainTitle>
-          <MainSubtitle>
-            Track how your links are performing across the web with our advanced
-            statistics dashboard.
-          </MainSubtitle>
-        </TitleHeader>
-        <CardWrapper>
-          <CyanLine />
-          {statisticItems.map((item, idx) => (
-            <Card style={{ marginTop: idx * 40 }}>
-              <CardImageLabel>
-                <img src={item.img} alt="gambar" />
-              </CardImageLabel>
-              <h3 style={{ marginTop: 40 }}>{item.title}</h3>
-              <CardDesc>{item.desc}</CardDesc>
-            </Card>
-          ))}
-        </CardWrapper>
-      </Container>
-    </StatisticWrapper>
+    <>
+      <StatisticWrapper>
+        <Container>
+          <Shortener />
+          <TitleHeader>
+            <MainTitle>Advanced Statistics</MainTitle>
+            <MainSubtitle>
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </MainSubtitle>
+          </TitleHeader>
+          <CardWrapper>
+            <CyanLine />
+            <VrCyanLine />
+            {statisticItems.map((item, idx) => (
+              <Card key={idx}>
+                <CardImageLabel>
+                  <img src={item.img} alt="gambar" />
+                </CardImageLabel>
+                <h3 style={{ marginTop: 40 }}>{item.title}</h3>
+                <CardDesc>{item.desc}</CardDesc>
+              </Card>
+            ))}
+          </CardWrapper>
+        </Container>
+      </StatisticWrapper>
+    </>
   );
 };
 

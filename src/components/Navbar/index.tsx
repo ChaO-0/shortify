@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import { Button } from '../Globals/Button';
 import {
@@ -8,10 +8,20 @@ import {
   NavLink,
   BurgerMobile,
   DesktopButton,
+  MobileNavItem,
+  MobileMainNavWrapper,
+  MobileMenuWrapper,
+  MobileButtonMenuWrapper,
 } from './styled';
-import { ReactComponent as MenuIcon } from '../../assets/images/icon-menu.svg';
+import MenuIcon from '../../assets/images/icon-menu.svg';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleOpenMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
+
   return (
     <Nav>
       <NavItems>
@@ -27,8 +37,24 @@ const Navbar: React.FC = () => {
         <Button backgroundColor="hsl(180, 66%, 49%)">Sign Up</Button>
       </DesktopButton>
       <BurgerMobile>
-        <MenuIcon />
+        <img src={MenuIcon} alt="burger" onClick={handleOpenMenu} />
       </BurgerMobile>
+      <MobileMenuWrapper open={openMenu}>
+        <MobileMainNavWrapper>
+          <MobileNavItem>Features</MobileNavItem>
+          <MobileNavItem>Pricing</MobileNavItem>
+          <MobileNavItem>Resources</MobileNavItem>
+        </MobileMainNavWrapper>
+        <MobileButtonMenuWrapper>
+          <Button color="white">Login</Button>
+          <Button
+            backgroundColor="hsl(180, 66%, 49%)"
+            style={{ marginTop: 12 }}
+          >
+            Sign Up
+          </Button>
+        </MobileButtonMenuWrapper>
+      </MobileMenuWrapper>
     </Nav>
   );
 };

@@ -13,9 +13,25 @@ export const Card = styled.div`
     margin-right: 0;
   }
 
+  &:nth-child(4) {
+    @media screen and (min-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+  &:nth-child(5) {
+    @media screen and (min-width: 768px) {
+      margin-top: 80px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     margin-right: 0;
     text-align: center;
+
+    &:not(:nth-child(2)) {
+      margin-top: 90px;
+    }
   }
 `;
 
@@ -38,8 +54,12 @@ export const CardImageLabel = styled.div`
 
 export const StatisticWrapper = styled.div`
   background-color: #f0f1f6;
-  margin-top: -60px;
-  padding: 120px 0;
+  margin-top: 250px;
+  padding: 80px 0;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 180px;
+  }
 `;
 
 export const TitleHeader = styled.div`
@@ -53,6 +73,7 @@ export const MainTitle = styled.div`
 
   @media screen and (max-width: 768px) {
     font-size: 32px;
+    margin-top: -80px;
   }
 `;
 
@@ -82,4 +103,17 @@ export const CyanLine = styled.hr`
   width: 95%;
   position: absolute;
   top: 125px;
+`;
+
+export const VrCyanLine = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    border-left: 8px solid hsl(180, 66%, 49%);
+    height: 800px;
+    position: absolute;
+    top: 100px;
+    left: 178px;
+  }
 `;
